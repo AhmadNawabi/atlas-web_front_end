@@ -1,6 +1,8 @@
 /* Set the foreground color of the body to text-color */
 body{
     color: var(--text-color);
+    /* Apply font-family to body using the custom property */
+    font-family: var(--font-family-base);
 }
 
 /* Set the foreground color of all anchor elements to text-color */
@@ -25,6 +27,7 @@ a{
 
 /* Define CSS variables in :root to be used throughout the stylesheet */
 :root{
+
     --color-primary: #d73953; /* Primary color for accent elements */
     --color-black: #090909; /* Black color */
     --color-white: #ffffff; /* White color */
@@ -32,4 +35,17 @@ a{
     --color-dark-grey: #353535; /* Dark grey color */
 
     --text-color: var(--color-black); /* Text color initially set to color-black variable */
+}
+
+/* Define custom font-family properties in :root */
+:root{
+
+    --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-family-title: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Apply font-family to all heading tags using the custom property */
+h1, h2, h3, h4, h5, h6{
+
+    font-family: var(--font-family-title);
 }
