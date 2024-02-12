@@ -29,7 +29,7 @@ a{
     --color-black: #090909; /* Black color */
     --color-white: #ffffff; /* White color */
     --color-light-grey: #f3f3f3; /* Light grey color */
-    --color-dark-grey: #383838; /* Dark grey color */
+    --color-dark-grey: #353535; /* Dark grey color */
 
     --text-color: var(--color-black); /* Text color initially set to color-black variable */
 }
