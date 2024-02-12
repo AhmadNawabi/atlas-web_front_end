@@ -1,0 +1,35 @@
+/* Set the foreground color of the body to text-color */
+body{
+    color: var(--text-color);
+}
+
+/* Set the foreground color of all anchor elements to text-color */
+a{
+    color: var(--text-color);
+}
+
+/* Hide all elements with the class visually-hidden */
+.visually-hidden{
+    display: none;
+}
+
+/* Set the foreground color of elements with the class card-category to color-primary */
+.card-category{
+    color: var(--color-primary);
+}
+
+/* Set the foreground color of elements with the class section-tagline to color-primary */
+.section-tagline{
+    color: var(--color-primary);
+}
+
+/* Define CSS variables in :root to be used throughout the stylesheet */
+:root{
+    --color-primary: #d73953; /* Primary color for accent elements */
+    --color-black: #090909; /* Black color */
+    --color-white: #ffffff; /* White color */
+    --color-light-grey: #f3f3f3; /* Light grey color */
+    --color-dark-grey: #383838; /* Dark grey color */
+
+    --text-color: var(--color-black); /* Text color initially set to color-black variable */
+}
