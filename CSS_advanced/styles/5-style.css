@@ -1,11 +1,16 @@
+/* HTML elements */
 html{
     scroll-behavior: smooth;
+    font-size: 62.5%;/* Set the base font size to 62.5% of the default size (typically 16px) */
 }
+
 /* Set the foreground color of the body to text-color */
 body{
     color: var(--text-color);
     /* Apply font-family to body using the custom property */
     font-family: var(--font-family-base);
+    /* Apply font-size-medium */
+    font-size: var(--font-size-medium);
 }
 
 /* Set the foreground color of all anchor elements to text-color */
@@ -42,8 +47,9 @@ a{
 
 /* Define custom font-family properties in :root */
 :root{
-
+    /* Base font family for the entire document */
     --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* Font family for titles or headings, using the same choices as the base */
     --font-family-title: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -51,4 +57,18 @@ a{
 h1, h2, h3, h4, h5, h6{
 
     font-family: var(--font-family-title);
+}
+
+/* Creating the size custom properties */
+:root{
+    /* Custom property for small font size */
+    --font-size-small: 1.2rem;
+    /* Custom property for medium font size */
+    --font-size-medium: 1.6rem;
+    /* Custom property for large font size */
+    --font-size-large: 1.8rem;
+    /* Custom property for extra-large font size */
+    --font-size-x-large: 2.3rem;
+    /* Custom property for double extra-large font size */
+    --font-size-xx-large: 4.8rem;
 }

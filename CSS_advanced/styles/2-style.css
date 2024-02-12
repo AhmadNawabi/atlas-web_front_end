@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 /* Set the foreground color of the body to #161616 */
 body{
     color: #161616;

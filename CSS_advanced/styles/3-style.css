@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 /* Set the foreground color of the body to text-color */
 body{
     color: var(--text-color);
