@@ -17,13 +17,38 @@ body{
     line-height: var(--line-height-base);
 }
 
-/* Set the foreground color of all anchor elements to text-color */
-a{
+/* Target anchor elements with hyperlinks */
+a:link{
 
     /* Use the custom text color property for anchor elements */
     color: var(--text-color);
     /* Remove text decoration (e.g., underlines) from anchor elements */
     text-decoration: none;
+}
+
+/* Target visited state for the link and italicize the text */
+a:visited{
+
+    /* Use the custom text color property for anchor elements */
+    color: var(--text-color);
+    /* Remove text decoration (e.g., underlines) from anchor elements */
+    text-decoration: none;
+    /* Italicize the text */
+    font-style: italic;
+}
+
+/* Target hover state for the link and decorate with underline */
+a:hover{
+    
+    /* Decorate the links with an underline when hovering */
+    text-decoration: underline;
+}
+
+/* Target active state for the link and set the background color with color-light-grey */
+a:active{
+
+    /* set the background color with color-light-grey */
+    background-color: var(--color-light-grey);
 }
 
 /* Hide all elements with the class visually-hidden */
