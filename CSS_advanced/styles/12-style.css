@@ -153,5 +153,5 @@ h1, h2, h3, h4, h5, h6{
     /* Set the margin of section titles to 0 for no spacing */
     --section-title-margin: 0;
     /* Set the color of section titles using the color-black custom property */
-    --section-title-color: color-black;
+    --section-title-color: var(--color-black);
 }

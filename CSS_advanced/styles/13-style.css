@@ -1,0 +1,157 @@
+/* HTML elements */
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;/* Set the base font size to 62.5% of the default size (typically 16px) */
+}
+
+/* Set the foreground color of the body to text-color */
+body{
+    color: var(--text-color);
+    /* Apply font-family to body using the custom property */
+    font-family: var(--font-family-base);
+    /* Apply font-size-medium to the body*/
+    font-size: var(--font-size-medium);
+    /* Apply regular (normal) font weight to the body */
+    font-weight: var(--font-weight-regular);
+    /* Set the minimum height of line boxes in the body to line-height-base */
+    line-height: var(--line-height-base);
+}
+
+/* Set the foreground color of all anchor elements to text-color */
+a{
+
+    /* Use the custom text color property for anchor elements */
+    color: var(--text-color);
+    /* Remove text decoration (e.g., underlines) from anchor elements */
+    text-decoration: none;
+}
+
+/* Hide all elements with the class visually-hidden */
+.visually-hidden{
+    display: none;
+}
+
+/* Set the foreground color of elements with the class card-category to color-primary */
+.card-category{
+    
+    color: var(--color-primary);
+}
+
+/* Target the class section-header and set its horizontal alignment using the custom property */
+.section-header{
+
+    /* Set the text alignment using the custom property */
+    text-align: var(--section-header-align);
+}
+
+/* Styling for section titles */
+.section-title{
+
+    /* Set the font family for section titles using the title font family custom property */
+    font-family: var(--font-family-title);
+    /* Set the font size for section titles using the xx-large font size custom property */
+    font-size: var(--font-size-xx-large);
+    /* Set the font weight for section titles using the bold font weight custom property */
+    font-weight: var(--font-weight-bold);
+    /* Set the margin for section titles using the section title margin custom property */
+    margin: var(--section-title-margin);
+    /* Set the color for section titles using the section title color custom property */
+    color: var(--section-title-color);
+}
+
+/* Set the foreground color of elements with the class section-tagline to color-primary */
+.section-tagline{
+
+    /* Set text color using the primary color custom property */
+    color: var(--color-primary);
+    /* Set font family using the title font family custom property */
+    font-family: var(--font-family-title);
+    /* Transform text to uppercase using the section tagline transform custom property */
+    text-transform: var(--section-tagline-transform);
+    /* Set font weight to bold using the bold font weight custom property */
+    font-weight: var(--font-weight-bold);
+}
+
+/* Define CSS variables in :root to be used throughout the stylesheet */
+:root{
+
+    --color-primary: #d73953; /* Primary color for accent elements */
+    --color-black: #090909; /* Black color */
+    --color-white: #ffffff; /* White color */
+    --color-light-grey: #f3f3f3; /* Light grey color */
+    --color-dark-grey: #353535; /* Dark grey color */
+
+    --text-color: var(--color-black); /* Text color initially set to color-black variable */
+}
+
+/* Define custom font-family properties in :root */
+:root{
+    /* Base font family for the entire document */
+    --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* Font family for titles or headings, using the same choices as the base */
+    --font-family-title: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Apply font-family to all heading tags using the custom property */
+h1, h2, h3, h4, h5, h6{
+
+    /* Use the custom font-family for headings */
+    font-family: var(--font-family-title);
+    /* Apply bold font weight to headings*/
+    font-weight: var(--font-weight-bold);
+}
+
+/* Creating the size custom properties */
+:root{
+    /* Custom property for small font size */
+    --font-size-small: 1.2rem;
+    /* Custom property for medium font size */
+    --font-size-medium: 1.6rem;
+    /* Custom property for large font size */
+    --font-size-large: 1.8rem;
+    /* Custom property for extra-large font size */
+    --font-size-x-large: 2.3rem;
+    /* Custom property for double extra-large font size */
+    --font-size-xx-large: 4.8rem;
+}
+
+/* Creating the weight custon properties */
+:root{
+    /* Custom property for regular (normal) font weight */
+    --font-weight-regular: 400;
+    /* Custom property for bold font weight */
+    --font-weight-bold: 700;
+}
+
+/* Define custom line-height properties in :root */
+:root{
+
+    /* Custom property for small line height */
+    --line-height-small: 1.2;
+    /* Custom property for base (normal) line height */
+    --line-height-base: 1.5;
+    /* Custom property for big (large) line height */
+    --line-height-big: 1.8;
+}
+
+/* Define a custom property in :root to set the default horizontal alignment for section headers */
+:root{
+
+     /* Set the default alignment to center, can be customized as needed */
+    --section-header-align: center;
+}
+
+/* Define a custom property making all laters capital */
+:root{
+    
+    /* Set text to uppercase, making it all capital letters */
+    --section-tagline-transform: uppercase;
+}
+
+:root{
+
+    /* Set the margin of section titles to 0 for no spacing */
+    --section-title-margin: 0;
+    /* Set the color of section titles using the color-black custom property */
+    --section-title-color: var(--color-black);
+}
