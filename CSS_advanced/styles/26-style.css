@@ -364,7 +364,7 @@ ul.footer{
     /* Set the display property to 'block' for <cite> elements within elements with the class 'card-quote' to start on a new line */
     display: block;
     /* Add padding to <cite> elements within elements with the class 'card-quote' */
-    padding: 1rem;
+    padding-top: 1rem;
     /* Set the text color of <cite> elements within elements with the class 'card-quote' to the value of the --color-primary variable */
     color: var(--color-primary);
 }
