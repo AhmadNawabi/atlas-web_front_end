@@ -479,7 +479,7 @@ ul.footer{
     position: relative;
 }
 
-.card-work a .card-title a{
+.card-work .card-title a {
 
     display: block;
     text-decoration: none;
