@@ -58,20 +58,31 @@ a:active{
     background-color: var(--color-light-grey);
 }
 
+/* Select elements with the class 'button' */
 .button{
 
+    /* Set the display property to the value of the --button-display variable */
     display: var(--button-display);
+    /* Set the padding of the button to the value of the --button-padding variable */
     padding: var(--button-padding);
+    /* Set the border of the button to the value of the --button-border variable */
     border: var(--button-border);
+    /* Set the font size of the button to the value of the --button-font-size variable */
     font-size: var(--button-font-size);
+    /* Set the text color of the button to the value of the --button-color variable */
     color: var(--button-color);
+    /* Set the text decoration of the button to the value of the --button-text-decoration variable */
     text-decoration: var(--button-text-decoration);
 }
 
+/* Select elements with the class 'button' when hovered */
 .button:hover{
 
+     /* Change the text color of the button to the value of the --button-hover-color variable when hovered */
     color: var(--button-hover-color);
+    /* Change the text decoration of the button to the value of the --button-hover-text-decoration variable when hovered */
     text-decoration: var(--button-hover-text-decoration);
+     /* Change the background color of the button to the value of the --button-hover-background variable when hovered */
     background: var(--button-hover-background);
 }
 
@@ -479,17 +490,26 @@ h6{
     padding: 0.5rem;
 }
 
-
+/* Define custom properties at the root level, making them globally accessible throughout the document */
 :root{
 
+    /* Set the custom property --button-display to 'inline-block' */
     --button-display: inline-block;
+    /* Set the custom property --button-padding to 1.5rem top/bottom and 3rem left/right */
     --button-padding: 1.5rem 3rem;
+    /* Set the custom property --button-border to 0.2rem solid with the color value from --color-primary */
     --button-border: 0.2rem solid var(--color-primary);
+    /* Set the custom property --button-color to the color value from --color-black */
     --button-color: var(--color-black);
+    /* Set the custom property --button-text-decoration to 'none' */
     --button-text-decoration: none;
+    /* Set the custom property --button-font-size to the value from --font-size-large */
     --button-font-size: var(--font-size-large);
+    /* Set the custom property --button-hover-color to the color value from --color-white */
     --button-hover-color: var(--color-white);
+    /* Set the custom property --button-hover-text-decoration to 'none' */
     --button-hover-text-decoration: none;
+    /* Set the custom property --button-hover-background to the color value from --color-primary */
     --button-hover-background: var(--color-primary);
 }
 
