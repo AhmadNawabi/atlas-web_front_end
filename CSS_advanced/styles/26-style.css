@@ -340,23 +340,32 @@ ul.footer{
     text-decoration: none;
 }
 
-
+/* Select elements with the class 'card-testimonial' */
 .card-testimonial{
 
+    /* Align the text to the center */
     text-align: center;
 }
 
+/* Select elements with the class 'card-avatar' that are descendants of elements with the class 'card-testimonial' */
 .card-testimonial .card-avatar{
 
+     /* Apply a border-radius of 50% to create a circular shape for elements with the class 'card-avatar' */
     border-radius: 50%;
-    width: 10em;
-    height: 10em;
+    /* Set the to the 10rem */
+    width: 10rem;
+    /* Set the height to the 10rem */
+    height: 10rem;
 }
 
+/* Select <cite> elements that are descendants of elements with the class 'card-quote' within elements with the class 'card-testimonial' */
 .card-testimonial .card-quote cite{
 
+    /* Set the display property to 'block' for <cite> elements within elements with the class 'card-quote' to start on a new line */
     display: block;
-    padding: 1em;
+    /* Add padding to <cite> elements within elements with the class 'card-quote' */
+    padding: 1rem;
+    /* Set the text color of <cite> elements within elements with the class 'card-quote' to the value of the --color-primary variable */
     color: var(--color-primary);
 }
 
