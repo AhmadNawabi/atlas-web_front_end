@@ -1,0 +1,1091 @@
+/* Universal box sizing rule */
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+/* HTML elements */
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;/* Set the base font size to 62.5% of the default size (typically 16px) */
+}
+
+/* Set the foreground color of the body to text-color */
+body{
+    color: var(--text-color);
+    /* Apply font-family to body using the custom property */
+    font-family: var(--font-family-base);
+    /* Apply font-size-medium to the body*/
+    font-size: var(--font-size-medium);
+    /* Apply regular (normal) font weight to the body */
+    font-weight: var(--font-weight-regular);
+    /* Set the minimum height of line boxes in the body to line-height-base */
+    line-height: var(--line-height-base);
+}
+
+/* Target anchor elements with hyperlinks */
+a:link{
+
+    /* Use the custom text color property for anchor elements */
+    color: var(--text-color);
+    /* Remove text decoration (e.g., underlines) from anchor elements */
+    text-decoration: none;
+}
+
+/* Target visited state for the link and italicize the text */
+a:visited{
+
+    /* Use the custom text color property for anchor elements */
+    color: var(--text-color);
+    /* Remove text decoration (e.g., underlines) from anchor elements */
+    text-decoration: none;
+    /* Italicize the text */
+    font-style: italic;
+}
+
+/* Target hover state for the link and decorate with underline */
+a:hover{
+    
+    /* Decorate the links with an underline when hovering */
+    text-decoration: underline;
+}
+
+/* Target active state for the link and set the background color with color-light-grey */
+a:active{
+
+    /* set the background color with color-light-grey */
+    background-color: var(--color-light-grey);
+}
+
+/* Select elements with the class 'button' */
+.button{
+
+    /* Set the display property to the value of the --button-display variable */
+    display: var(--button-display);
+    /* Set the padding of the button to the value of the --button-padding variable */
+    padding: var(--button-padding);
+    /* Set the border of the button to the value of the --button-border variable */
+    border: var(--button-border);
+    /* Set the font size of the button to the value of the --button-font-size variable */
+    font-size: var(--button-font-size);
+    /* Set the text color of the button to the value of the --button-color variable */
+    color: var(--button-color);
+    /* Set the text decoration of the button to the value of the --button-text-decoration variable */
+    text-decoration: var(--button-text-decoration);
+}
+
+/* Select elements with the class 'button' when hovered */
+.button:hover{
+
+     /* Change the text color of the button to the value of the --button-hover-color variable when hovered */
+    color: var(--button-hover-color);
+    /* Change the text decoration of the button to the value of the --button-hover-text-decoration variable when hovered */
+    text-decoration: var(--button-hover-text-decoration);
+     /* Change the background color of the button to the value of the --button-hover-background variable when hovered */
+    background: var(--button-hover-background);
+}
+
+
+/* Hide all elements with the class visually-hidden */
+.visually-hidden{
+    display: none;
+}
+
+/* Set the foreground color of elements with the class card-category to color-primary */
+.card-category{
+    
+    color: var(--color-primary);
+}
+
+/* Apply padding to elements with the class .section using a custom property */
+.section{
+
+    /* Set padding on all four sides using the custom property --section-padding */
+    padding: var(--section-padding);
+}
+
+/* Target the class section-header and set its horizontal alignment using the custom property */
+.section-header{
+
+    /* Set the text alignment using the custom property */
+    text-align: var(--section-header-align);
+    /* Set padding on all four sides using the custom property --section-header-padding */
+    padding: var(--section-header-padding);
+}
+
+/* Apply padding to elements with the class .section-body using a custom property */
+.section-body{
+
+    /* Set padding on all four sides using the custom property --section-body-padding */
+    padding: var(--section-body-padding);
+}
+
+/* Apply padding and text alignment to elements with the class .section-footer using custom properties */
+.section-footer{
+
+    /* Set padding on all four sides using the custom property --section-footer-padding */
+    padding: var(--section-footer-padding);
+    /* Set text alignment using the custom property --section-footer-align */
+    text-align: var(--section-footer-align);
+}
+
+/* Apply padding to elements with the class .footer using a custom property */
+.footer{
+
+    /* Set padding on all four sides using the custom property --footer-padding */
+    padding: var(--footer-padding);
+}
+
+/* Styling for section titles */
+.section-title{
+
+    /* Set the font family for section titles using the title font family custom property */
+    font-family: var(--font-family-title);
+    /* Set the font size for section titles using the xx-large font size custom property */
+    font-size: var(--font-size-xx-large);
+    /* Set the font weight for section titles using the bold font weight custom property */
+    font-weight: var(--font-weight-bold);
+    /* Set the margin for section titles using the section title margin custom property */
+    margin: var(--section-title-margin);
+    /* Set the color for section titles using the section title color custom property */
+    color: var(--section-title-color);
+}
+
+/* Set the foreground color of elements with the class section-tagline to color-primary */
+.section-tagline{
+
+    /* Set text color using the primary color custom property */
+    color: var(--color-primary);
+    /* Set font family using the title font family custom property */
+    font-family: var(--font-family-title);
+    /* Transform text to uppercase using the section tagline transform custom property */
+    text-transform: var(--section-tagline-transform);
+    /* Set font weight to bold using the bold font weight custom property */
+    font-weight: var(--font-weight-bold);
+    /* Set the margins for the section-tagline class to section-tagline-margin */
+    margin: var(--section-tagline-margin);
+}
+
+/* Set the styles for the container inside elements with the class 'section-tagline' */
+.container{
+
+  /* Set the width of the container to 960 pixels */
+  width: 960px;
+  /* Automatically calculate and set the left margin to center the container within its parent element */
+  margin-left: auto;
+  /* Automatically calculate and set the right margin to center the container within its parent element */
+  margin-right: auto;
+}
+
+/* Targeting the navbar-menu class, let it float to the right */
+.navbar-menu{
+
+  /* Letting float to the right */
+  float: right;
+}
+
+/* For the nav class */
+.nav{
+
+  /* Set margin on all sides to 0 */
+  margin: 0;
+  /* Set padding on all sides to 0 */
+  padding: 0;
+  /* Center align the text */
+  text-align: center;
+  /* list style set to none */
+  list-style: none;
+}
+
+/* For the nav-item class in nav class */
+.nav .nav-item{
+
+  /* Set font weight using custom property */
+  font-family: var(--nav-item-font-family);
+  /* Set font weight using custom property */
+  font-weight: var(--nav-item-font-weight);
+  /* Set font size using custom property */
+  font-size: var(--nav-item-font-size);
+  /* letter spacing set to nav-item-letter-spacing */
+  letter-spacing: var(--nav-item-letter-spacing);
+  /* Set display property using custom property */
+  display: var(--nav-item-display);
+  /* Set margin using custom property */
+  margin: var(--nav-item-margin);
+}
+
+/* For the nav-link class in nav class */
+.nav .nav-link{
+
+  /* Set display to block */
+  display: block;
+  /* set the padding to half
+  of the root element for top and bottom, 
+  and equal to the root element for left and right */
+  padding: 0.5rem 1rem;
+}
+
+/* Hover effect on nav-link class in nav class */
+.nav .nav-link:hover{
+
+   /* Change color on hover using white color */
+  color: var(--color-white);
+}
+
+/* Select the before pseudo-elements of nav-link elements inside elements with the class 'nav' */
+.nav .nav-link::before{
+
+    /* Specify that the content of the before pseudo-elements is an empty string */
+    content: "";
+    /* Set the position of the before pseudo-elements to 'absolute' */
+    position: absolute;
+    /* Position the before pseudo-elements at the top-left corner of their containing element */
+    top: 0;
+    left: 0;
+    /* Set the background color of the before pseudo-elements to the value of the --color-white variable */
+    background-color: var(--color-white);
+    /* Set the width of the before pseudo-elements to 0 */
+    width: 0;
+    /* Set the height of the before pseudo-elements to 0.2rem */
+    height: 0.2rem;
+}
+
+.nav .nav-item:hover .nav-link::before{
+
+    background-color: var(--color-primary);
+    width: 100%;
+}
+
+/* Styling for an unordered list inside elements with the class 'row' */
+ul.row{
+
+  /* Resetting margin to zero for the unordered list */
+  margin: 0;
+  /* Resetting padding to zero for the unordered list */
+  padding: 0;
+  /* Removing default list styling (bullet points) */
+  list-style: none;
+}
+
+/* Styling for a column taking up one-third of the width */
+.col-1-3{
+
+  /* Setting the width of the column to one-third */
+  width: 33.33%;
+}
+
+/* Styling for a column taking up one-half of the width */
+.col-1-2{
+
+  /* Setting the width of the column to one-half */
+  width: 50%;
+}
+
+/* Styling for the copyright information in the footer */
+.footer-copyright{
+
+  /* Resetting margin to zero for the element */
+  margin: 0;
+  /* Setting font size using a custom property */
+  font-size: var(--font-size-small);
+  /* Setting text color using a custom property */
+  color: var(--text-color);
+
+}
+
+/* Styling for an unordered list inside elements with the class 'footer' */
+ul.footer{
+
+  /* Aligning the text to the right within the 'footer' element */
+  text-align: right;
+}
+
+/* Define a CSS class for a data section theme */
+[data-section-theme="dark"]{
+
+    /* Redefine the custom property --text-color to the value of --color-white */
+    --text-color: var(--color-white);
+    /* Redefine the custom property --section-title-color to the value of --color-white */
+    --section-title-color: var(--color-white);
+    /* Set the background property to the value of --color-black */
+    background: var(--color-black);
+    /* Create a custom property button-color pointing to the variable color-white */
+    --button-color: var(--color-white);  
+}
+
+/* Style the footer-address class */
+.footer-address{
+
+    /* Set the color of the text to the text-color property */
+    color: var(--text-color);
+}
+
+/* Style the social-link class: */
+.social-link{
+
+    /* Set the display property to 'block' to make it a block element */
+    display: block;
+}
+
+/* Select the SVG children of elements with the social-link class */
+.social-link > svg{
+
+    /* Fill in the color of the SVG children with the value of --text-color variable */
+    fill: var(--text-color);
+}
+
+/* Select the element with the class 'card-title' that is a descendant of an element with the class 'card-services' */
+.card-services .card-title{
+
+    /* Set the margin of the 'card-title' element to 0 */
+    margin: 0;
+}
+
+/* Select anchor elements within an element with the class 'card-services' */
+.card-services a{
+
+    /* Set the display property to 'block' for the anchor elements */
+    display: block;
+    /* Set padding for the anchor elements, using 2rem for top, bottom, left, and right */
+    padding: 2rem;
+    /* Set the background color of the anchor elements to the value of the --color-light-grey variable */
+    background-color: var(--color-light-grey);
+}
+
+/* Select anchor elements within an element with the class 'card-services' when hovered */
+.card-services a:hover{
+
+    /* Set the text color of the hovered anchor elements to the value of the --color-white variable */
+    color: var(--color-white);
+    /* Set the background color of the hovered anchor elements to the value of the --color-primary variable */
+    background-color: var(--color-primary);
+    /* Remove the underline on the hovered anchor elements */
+    text-decoration: none;
+}
+
+/* Select elements with the class 'card-testimonial' */
+.card-testimonial{
+
+    /* Align the text to the center */
+    text-align: center;
+}
+
+/* Select elements with the class 'card-avatar' that are descendants of elements with the class 'card-testimonial' */
+.card-testimonial .card-avatar{
+
+     /* Apply a border-radius of 50% to create a circular shape for elements with the class 'card-avatar' */
+    border-radius: 50%;
+    /* Set the to the 10rem */
+    width: 10rem;
+    /* Set the height to the 10rem */
+    height: 10rem;
+}
+
+/* Select <cite> elements that are descendants of elements with the class 'card-quote' within elements with the class 'card-testimonial' */
+.card-testimonial .card-quote cite{
+
+    /* Set the display property to 'block' for <cite> elements within elements with the class 'card-quote' to start on a new line */
+    display: block;
+    /* Add padding to <cite> elements within elements with the class 'card-quote' */
+    padding-top: 1rem;
+    /* Set the text color of <cite> elements within elements with the class 'card-quote' to the value of the --color-primary variable */
+    color: var(--color-primary);
+}
+
+/* Select elements with the class 'section-hero' */
+.section-hero{
+
+    /* Set the background size of 'section-hero' elements to 90rem width and auto height */
+    background-size: 90rem auto;
+}
+
+/* Select elements with the class 'section-title' that are descendants of elements with the class 'section-hero' */
+.section-hero .section-title{
+
+    /* Add a bottom margin of 5rem to 'section-title' elements within 'section-hero' */
+    margin-bottom: 5rem;
+}
+
+/* Select elements with the class 'section-inner' that are descendants of elements with the class 'section-hero' */
+.section-hero .section-inner{
+
+    /* Set padding for 'section-inner' elements within 'section-hero' - 10rem top, 40rem right, 2rem bottom, 0 left */
+    padding: 10rem 40rem 2rem 0;
+}
+
+/* Select elements with the class 'header' */
+.header{
+
+    /* Set padding for elements with the class 'header' using the value of the --header-padding variable */
+    padding: var(--header-padding);
+}
+
+/* Select elements with the class 'header-logo' */
+.header-logo{
+
+     /* Set the position property for elements with the class 'header-logo' using the value of the --header-logo-position variable */
+    position: var(--header-logo-position);    
+}
+
+/* Select anchor elements within elements with the class 'header-logo' */
+.header-logo a {
+
+    /* Render the display property for anchor elements within 'header-logo' using the value of the --header-logo-link-display variable */
+    display: var(--header-logo-link-display);
+    /* Set the position property for anchor elements within 'header-logo' using the value of the --header-logo-link-position variable */
+    position: var(--header-logo-link-position);
+    /* Set the vertical position of anchor elements within 'header-logo' using the value of the --header-logo-link-top variable */
+    top: var(--header-logo-link-top);
+    /* Set the horizontal position of anchor elements within 'header-logo' using the value of the --header-logo-link-left variable */
+    left: var(--header-logo-link-left);
+}
+
+
+/* Select elements with the class 'card-outer' inside elements with the class 'card-work' */
+.card-work .card-outer{
+
+    /* Set the position property to 'relative' for 'card-outer' elements */
+    position: relative;
+    /* Hide overflowing content for 'card-outer' elements */
+    overflow: hidden;
+}
+
+/* Select images inside elements with the class 'card-image' inside elements with the class 'card-work' */
+.card-work .card-image img{
+
+    /* Set the height of the images to 30rem */
+    height: 30rem;
+    /* Set the width of the images to 100% */
+    width: 100%;
+    /* Use object-fit: cover to maintain aspect ratio and cover the entire container */
+    object-fit: cover;
+    /* Align the images to the bottom of their inline-level container (may not have a significant effect on block-level elements) */
+    vertical-align: bottom;
+}
+
+/* Select elements with the class 'card-inner' inside elements with the class 'card-work' */
+.card-work .card-inner{
+
+    /* Set the position property to 'absolute' for 'card-inner' elements */
+    position: absolute;
+    /* Position 'card-inner' elements to extend slightly beyond their containing element */
+    top: -0.1rem;
+    left: -0.1rem;
+    right: -0.1rem;
+    /* Set the z-index property to 1 for stacking order */
+    z-index: 1;
+}
+
+/* Select 'card-inner' elements inside hovered 'card-work' elements and change background color */
+.card-work:hover .card-inner{
+
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Select elements with the class 'card-title' inside elements with the class 'card-work' */
+.card-work .card-title{
+
+    /* Center-align text within 'card-title' elements */
+    text-align: center;
+    /* Set margin to 0 for 'card-title' elements */
+    margin: 0;
+    /* Set opacity to 0 to make 'card-title' initially invisible */
+    opacity: 0;
+    /* Set the height of 'card-title' elements to 100% of their containing element */
+    height: 100%;
+    /* Set the position property to 'relative' for 'card-title' elements */
+    position: relative;
+}
+
+/* Select anchor elements within 'card-title' elements inside elements with the class 'card-work' */
+.card-work .card-title a {
+
+    /* Display anchor elements as block elements */
+    display: block;
+    /* Remove underline from anchor elements */
+    text-decoration: none;
+    /* Set padding on the top of anchor elements */
+    padding-top: 45%;
+}
+
+/* Select the ::after pseudo-elements of anchor elements within 'card-title' elements inside elements with the class 'card-work' */
+.card-work .card-title a::after{
+
+    /* Position pseudo-elements to cover the entire area of their containing anchor element */
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    /* Set the content property to an empty string */
+    content: "";
+}
+
+/* Select 'card-title' elements inside hovered 'card-work' elements and change opacity to 1 */
+.card-work:hover .card-title{
+
+    opacity: 1;
+}
+
+
+.card-testimonial .card-quote{
+
+    position: relative;
+}
+
+.card-testimonial .card-quote::before{
+
+    content: \201C;
+    position: absolute;
+    object-position: -4.5rem;
+    left: -1rem;
+    color: #efeded;
+    font-size: 10rem;
+    z-index: -1;
+}
+
+
+/* Define CSS variables in :root to be used throughout the stylesheet */
+:root{
+
+    --color-primary: #d73953; /* Primary color for accent elements */
+    --color-black: #090909; /* Black color */
+    --color-white: #ffffff; /* White color */
+    --color-light-grey: #f3f3f3; /* Light grey color */
+    --color-dark-grey: #353535; /* Dark grey color */
+
+    --text-color: var(--color-black); /* Text color initially set to color-black variable */
+}
+
+/* Define custom font-family properties in :root */
+:root{
+    /* Base font family for the entire document */
+    --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* Font family for titles or headings, using the same choices as the base */
+    --font-family-title: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Apply font-family to all heading tags using the custom property */
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6{
+
+    /* Use the custom font-family for headings */
+    font-family: var(--font-family-title);
+    /* Apply bold font weight to headings*/
+    font-weight: var(--font-weight-bold);
+}
+
+/* Creating the size custom properties */
+:root{
+    /* Custom property for small font size */
+    --font-size-small: 1.2rem;
+    /* Custom property for medium font size */
+    --font-size-medium: 1.6rem;
+    /* Custom property for large font size */
+    --font-size-large: 1.8rem;
+    /* Custom property for extra-large font size */
+    --font-size-x-large: 2.3rem;
+    /* Custom property for double extra-large font size */
+    --font-size-xx-large: 4.8rem;
+}
+
+/* Creating the weight custon properties */
+:root{
+    /* Custom property for regular (normal) font weight */
+    --font-weight-regular: 400;
+    /* Custom property for bold font weight */
+    --font-weight-bold: 700;
+}
+
+/* Define custom line-height properties in :root */
+:root{
+
+    /* Custom property for small line height */
+    --line-height-small: 1.2;
+    /* Custom property for base (normal) line height */
+    --line-height-base: 1.5;
+    /* Custom property for big (large) line height */
+    --line-height-big: 1.8;
+}
+
+/* Define a custom property in :root to set the default horizontal alignment for section headers */
+:root{
+
+     /* Set the default alignment to center, can be customized as needed */
+    --section-header-align: center;
+}
+
+/* Define a custom property making all laters capital */
+:root{
+    
+    /* Set text to uppercase, making it all capital letters */
+    --section-tagline-transform: uppercase;
+}
+
+:root{
+
+    /* Set the margin of section titles to 0 for no spacing */
+    --section-title-margin: 0;
+    /* Set the color of section titles using the color-black custom property */
+    --section-title-color: var(--color-black);
+}
+
+/* Define global custom properties in the :root block for consistent styling throughout the stylesheet */
+:root{
+
+    /* Set padding for elements with the class .section using the custom property --section-padding */
+    --section-padding: 5rem 0;
+    /* Set padding for section headers using the custom property --section-header-padding */
+    --section-header-padding: 0 0 3rem;
+     /* Set padding for section bodies using the custom property --section-body-padding */
+    --section-body-padding: 0 0 3rem;
+    /* Set padding and alignment for section footers using the custom properties --section-footer-padding and --section-footer-align */
+    --section-footer-padding: 3rem 0 0 ;
+    --section-footer-align: center;
+    /* Set padding for elements with the class .footer using the custom property --footer-padding */
+    --footer-padding: 5rem 0 1rem;
+}
+
+/* Define custom properties for styling navigation items */
+:root{
+    /* Set font family for navigation items to the value of --font-family-title */
+    --nav-item-font-family: var(--font-family-title);
+    /* Set font weight for navigation items to the value of --font-weight-bold */
+    --nav-item-font-weight: var(--font-weight-bold);
+    /* Set font size for navigation items to the value of --font-size-medium */
+    --nav-item-font-size: var(--font-size-medium);
+    /* Set letter spacing for navigation items to 4% of the root element */
+    --nav-item-letter-spacing: 0.04rem;
+    /* Set display property for navigation items to inline-block */
+    --nav-item-display: inline-block;
+    /* Set margin for navigation items to 3 times the root element on the bottom and 0 elsewhere */
+    --nav-item-margin: 0 0 3rem 0;
+    /* Set link hover color for navigation items to the value of --color-white */
+    --nav-item-link-hover: var(--color-white);
+}
+
+/* Define custom properties within the :root pseudo-class */
+:root{
+
+    /* Set the value of --section-tagline-margin to 0 */
+  --section-tagline-margin: 0;
+}
+
+/* Create a new row after each instance of the class .row */
+.row::after{
+
+    /* Empty content is added to create a pseudo-element */
+    content: "";
+    /* Display property set to table to clear floats */
+    display: table;
+    /* Clear both sides to ensure elements are properly contained within the row */
+    clear: both;
+}
+
+/* Apply the following styles to all classes starting with "col-" */
+[class^="col-"]{
+
+    /* Float the element to the left to allow other elements to wrap around it */
+    float: left;
+    /* Add padding of 0.5rem on all sides of the element */
+    padding: 0.5rem;
+}
+
+/* Define custom properties at the root level, making them globally accessible throughout the document */
+:root{
+
+    /* Set the custom property --button-display to 'inline-block' */
+    --button-display: inline-block;
+    /* Set the custom property --button-padding to 1.5rem top/bottom and 3rem left/right */
+    --button-padding: 1.5rem 3rem;
+    /* Set the custom property --button-border to 0.2rem solid with the color value from --color-primary */
+    --button-border: 0.2rem solid var(--color-primary);
+    /* Set the custom property --button-color to the color value from --color-black */
+    --button-color: var(--color-black);
+    /* Set the custom property --button-text-decoration to 'none' */
+    --button-text-decoration: none;
+    /* Set the custom property --button-font-size to the value from --font-size-large */
+    --button-font-size: var(--font-size-large);
+    /* Set the custom property --button-hover-color to the color value from --color-white */
+    --button-hover-color: var(--color-white);
+    /* Set the custom property --button-hover-text-decoration to 'none' */
+    --button-hover-text-decoration: none;
+    /* Set the custom property --button-hover-background to the color value from --color-primary */
+    --button-hover-background: var(--color-primary);
+}
+
+/* Define custom properties at the root level, making them globally accessible throughout the document */
+:root{
+
+    /* Set the custom property --header-padding to 4rem top, 0 right, 0 bottom, 0 left */
+    --header-padding: 4rem 0 0;
+    /* Set the custom property --header-logo-position to 'relative' */
+    --header-logo-position: relative;
+    /* Set the custom property --header-logo-link-display to 'inline-block' */
+    --header-logo-link-display: inline-block;
+    /* Set the custom property --header-logo-link-position to 'absolute' */
+    --header-logo-link-position: absolute;
+    /* Set the custom property --header-logo-link-top to -1rem (shift up by 1rem) */
+    --header-logo-link-top: -1rem;
+    /* Set the custom property --header-logo-link-left to 0 (no horizontal shift) */
+    --header-logo-link-left: 0;
+}
+
+
+
+/*===================================================================================================*/
+/*! normalize.css v8.0.1 | MIT License 
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+ html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+  }
+  
+  /* Sections
+     ========================================================================== */
+  
+  /**
+   * Remove the margin in all browsers.
+   */
+  
+  body {
+    margin: 0;
+  }
+  
+  /**
+   * Render the `main` element consistently in IE.
+   */
+  
+  main {
+    display: block;
+  }
+  
+  /**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+  
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+  
+  /* Grouping content
+     ========================================================================== */
+  
+  /**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+  
+  hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+  }
+  
+  /**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+  
+  pre {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+  /* Text-level semantics
+     ========================================================================== */
+  
+  /**
+   * Remove the gray background on active links in IE 10.
+   */
+  
+  a {
+    background-color: transparent;
+  }
+  
+  /**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+  
+  abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
+  }
+  
+  /**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+  
+  b,
+  strong {
+    font-weight: bolder;
+  }
+  
+  /**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+  
+  code,
+  kbd,
+  samp {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+  /**
+   * Add the correct font size in all browsers.
+   */
+  
+  small {
+    font-size: 80%;
+  }
+  
+  /**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+  
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  
+  sub {
+    bottom: -0.25em;
+  }
+  
+  sup {
+    top: -0.5em;
+  }
+  
+  /* Embedded content
+     ========================================================================== */
+  
+  /**
+   * Remove the border on images inside links in IE 10.
+   */
+  
+  img {
+    border-style: none;
+  }
+  
+  /* Forms
+     ========================================================================== */
+  
+  /**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+  
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+  }
+  
+  /**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+  
+  button,
+  input { /* 1 */
+    overflow: visible;
+  }
+  
+  /**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+  
+  button,
+  select { /* 1 */
+    text-transform: none;
+  }
+  
+  /**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+  
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    -webkit-appearance: button;
+  }
+  
+  /**
+   * Remove the inner border and padding in Firefox.
+   */
+  
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+  
+  /**
+   * Restore the focus styles unset by the previous rule.
+   */
+  
+  button:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+  
+  /**
+   * Correct the padding in Firefox.
+   */
+  
+  fieldset {
+    padding: 0.35em 0.75em 0.625em;
+  }
+  
+  /**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+  
+  legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
+  }
+  
+  /**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+  
+  progress {
+    vertical-align: baseline;
+  }
+  
+  /**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+  
+  textarea {
+    overflow: auto;
+  }
+  
+  /**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+  
+  [type="checkbox"],
+  [type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+  }
+  
+  /**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+  
+  [type="number"]::-webkit-inner-spin-button,
+  [type="number"]::-webkit-outer-spin-button {
+    height: auto;
+  }
+  
+  /**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+  
+  [type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+  }
+  
+  /**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+  
+  [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  
+  /**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+  
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
+  }
+  
+  /* Interactive
+     ========================================================================== */
+  
+  /*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+  
+  details {
+    display: block;
+  }
+  
+  /*
+   * Add the correct display in all browsers.
+   */
+  
+  summary {
+    display: list-item;
+  }
+  
+  /* Misc
+     ========================================================================== */
+  
+  /**
+   * Add the correct display in IE 10+.
+   */
+  
+  template {
+    display: none;
+  }
+  
+  /**
+   * Add the correct display in IE 10.
+   */
+  
+  [hidden] {
+    display: none;
+  }
+  
