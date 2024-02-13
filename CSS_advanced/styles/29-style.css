@@ -241,10 +241,10 @@ a:active{
     left: 0;
     background-color: var(--color-white);
     width: 0;
-    height: 20%;
+    height: 0.2rem;
 }
 
-nav .nav-item:hover .nav-link::before{
+.nav .nav-item:hover .nav-link::before{
 
     background-color: var(--color-primary);
     width: 100%;
@@ -555,7 +555,7 @@ h6{
     /* Set margin for navigation items to 3 times the root element on the bottom and 0 elsewhere */
     --nav-item-margin: 0 0 3rem 0;
     /* Set link hover color for navigation items to the value of --color-primary */
-    --nav-item-link-hover: var(--color-primary);
+    --nav-item-link-hover: var(--color-white);
 }
 
 /* Define custom properties within the :root pseudo-class */
