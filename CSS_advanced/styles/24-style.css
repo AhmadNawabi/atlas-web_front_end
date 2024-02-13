@@ -288,7 +288,7 @@ ul.footer{
 .card-services a{
 
     display: block;
-    padding: 2rex;
+    padding: 2rem;
     background-color: var(--color-light-grey);
 }
 
