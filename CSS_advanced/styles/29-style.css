@@ -233,14 +233,21 @@ a:active{
   color: var(--color-white);
 }
 
+/* Select the before pseudo-elements of nav-link elements inside elements with the class 'nav' */
 .nav .nav-link::before{
 
+    /* Specify that the content of the before pseudo-elements is an empty string */
     content: "";
+    /* Set the position of the before pseudo-elements to 'absolute' */
     position: absolute;
+    /* Position the before pseudo-elements at the top-left corner of their containing element */
     top: 0;
     left: 0;
+    /* Set the background color of the before pseudo-elements to the value of the --color-white variable */
     background-color: var(--color-white);
+    /* Set the width of the before pseudo-elements to 0 */
     width: 0;
+    /* Set the height of the before pseudo-elements to 0.2rem */
     height: 0.2rem;
 }
 
@@ -554,7 +561,7 @@ h6{
     --nav-item-display: inline-block;
     /* Set margin for navigation items to 3 times the root element on the bottom and 0 elsewhere */
     --nav-item-margin: 0 0 3rem 0;
-    /* Set link hover color for navigation items to the value of --color-primary */
+    /* Set link hover color for navigation items to the value of --color-white */
     --nav-item-link-hover: var(--color-white);
 }
 
@@ -608,13 +615,20 @@ h6{
     --button-hover-background: var(--color-primary);
 }
 
+/* Define custom properties at the root level, making them globally accessible throughout the document */
 :root{
 
+    /* Set the custom property --header-padding to 4rem top, 0 right, 0 bottom, 0 left */
     --header-padding: 4rem 0 0;
+    /* Set the custom property --header-logo-position to 'relative' */
     --header-logo-position: relative;
+    /* Set the custom property --header-logo-link-display to 'inline-block' */
     --header-logo-link-display: inline-block;
+    /* Set the custom property --header-logo-link-position to 'absolute' */
     --header-logo-link-position: absolute;
+    /* Set the custom property --header-logo-link-top to -1rem (shift up by 1rem) */
     --header-logo-link-top: -1rem;
+    /* Set the custom property --header-logo-link-left to 0 (no horizontal shift) */
     --header-logo-link-left: 0;
 }
 
