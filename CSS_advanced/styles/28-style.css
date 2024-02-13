@@ -402,7 +402,7 @@ ul.footer{
 }
 
 
-.header-log a{
+.header-log a {
 
     display: var(--header-logo-link-display);
     position: var(--header-logo-link-position);
