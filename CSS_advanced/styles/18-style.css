@@ -176,8 +176,8 @@ a:active{
   font-weight: var(--nav-item-font-weight);
   /* Set font size using custom property */
   font-size: var(--nav-item-font-size);
-  /* Adjusted from "padding" to "padding: var(--nav-item-letter-spacing);" based on the initial instruction */
-  padding: var(--nav-item-letter-spacing);
+  /* letter spacing set to nav-item-letter-spacing */
+  letter-spacing: var(--nav-item-letter-spacing);
   /* Set display property using custom property */
   display: var(--nav-item-display);
   /* Set margin using custom property */
@@ -190,7 +190,7 @@ a:active{
   /* Set display to block */
   display: block;
   /*- 50% for top and bottom */
-  padding: 50%;
+  padding: 50% 0% 50% 0;
 }
 
 /* Hover effect on nav-link class in nav class */
