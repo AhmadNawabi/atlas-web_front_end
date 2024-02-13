@@ -189,8 +189,10 @@ a:active{
 
   /* Set display to block */
   display: block;
-  /*- 50% for top and bottom and equal for the right and left */
-  padding: 50% 0%;
+  /* set the padding to half
+  of the root element for top and bottom, 
+  and equal to the root element for left and right */
+  padding: 0.5rem 1rem;
 }
 
 /* Hover effect on nav-link class in nav class */
@@ -221,7 +223,12 @@ a:active{
 }
 
 /* Apply font-family to all heading tags using the custom property */
-h1, h2, h3, h4, h5, h6{
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6{
 
     /* Use the custom font-family for headings */
     font-family: var(--font-family-title);
