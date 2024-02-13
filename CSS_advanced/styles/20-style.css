@@ -250,7 +250,7 @@ ul.row{
 }
 
 /* Styling for an unordered list inside elements with the class 'footer' */
-.footer ul{
+ul.footer{
 
   /* Aligning the text to the right within the 'footer' element */
   text-align: right;
@@ -384,6 +384,17 @@ h6{
 
     /* Set the value of --section-tagline-margin to 0 */
   --section-tagline-margin: 0;
+}
+
+/* Create a new row after each instance of the class .row */
+.row::after{
+
+    /* Empty content is added to create a pseudo-element */
+    content: "";
+    /* Display property set to table to clear floats */
+    display: table;
+    /* Clear both sides to ensure elements are properly contained within the row */
+    clear: both;
 }
 
 
