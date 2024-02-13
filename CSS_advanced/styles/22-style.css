@@ -249,11 +249,11 @@ ul.footer{
 }
 
 /* Define a CSS class for a data section theme */
-.data-section-theme{
+[data-section-theme="dark"]{
 
-    /* Set the variable --text-color to the value of --color-white */
+    /* Redefine the custom property --text-color to the value of --color-white */
     --text-color: var(--color-white);
-    /* Set the variable --section-title-color to the value of --color-white */
+    /* Redefine the custom property --section-title-color to the value of --color-white */
     --section-title-color: var(--color-white);
     /* Set the background property to the value of --color-black */
     background: var(--color-black);
