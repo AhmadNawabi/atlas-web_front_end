@@ -390,7 +390,7 @@ h6{
 }
 
 /* Apply the following styles to all classes starting with "col-" */
-* col-{
+[class^="col-"]{
 
     /* Float the element to the left to allow other elements to wrap around it */
     float: left;
