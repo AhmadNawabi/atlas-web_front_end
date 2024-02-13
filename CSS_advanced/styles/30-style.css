@@ -486,7 +486,7 @@ ul.footer{
     padding-top: 45%;
 }
 
-.card-work a::after .card-title a::after{
+.card-work .card-title a::after{
 
     position: absolute;
     top: 0;
