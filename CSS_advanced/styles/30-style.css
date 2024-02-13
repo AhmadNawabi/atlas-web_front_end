@@ -453,7 +453,7 @@ ul.footer{
     height: 30rem;
     width: 100%;
     object-fit: cover;
-    object-position: bottom;
+    align-items: bottom;
 }
 
 .card-work .card-inner{
