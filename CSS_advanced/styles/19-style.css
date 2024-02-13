@@ -205,7 +205,7 @@ a:active{
 }
 
 /* Styling for an unordered list inside elements with the class 'row' */
-.row:ul{
+ul.row{
 
   /* Resetting margin to zero for the unordered list */
   margin: 0;
@@ -250,7 +250,7 @@ a:active{
 }
 
 /* Styling for an unordered list inside elements with the class 'footer' */
-.footer:ul{
+ul.footer{
 
   /* Aligning the text to the right within the 'footer' element */
   text-align: right;
