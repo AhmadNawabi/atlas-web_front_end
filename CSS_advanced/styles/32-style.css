@@ -85,8 +85,8 @@ a:active{
      /* Change the background color of the button to the value of the --button-hover-background variable when hovered */
     background: var(--button-hover-background);
 
-    transition: var(--transition-duration);
-    transition: color, background-color;
+    transition-duration: var(--transition-duration);
+    transition-property: color, background-color;
 }
 
 
