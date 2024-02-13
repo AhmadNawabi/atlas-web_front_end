@@ -442,60 +442,87 @@ ul.footer{
 }
 
 
+/* Select elements with the class 'card-outer' inside elements with the class 'card-work' */
 .card-work .card-outer{
 
+    /* Set the position property to 'relative' for 'card-outer' elements */
     position: relative;
+    /* Hide overflowing content for 'card-outer' elements */
     overflow: hidden;
 }
 
+/* Select images inside elements with the class 'card-image' inside elements with the class 'card-work' */
 .card-work .card-image img{
 
+    /* Set the height of the images to 30rem */
     height: 30rem;
+    /* Set the width of the images to 100% */
     width: 100%;
+    /* Use object-fit: cover to maintain aspect ratio and cover the entire container */
     object-fit: cover;
+    /* Align the images to the bottom of their inline-level container (may not have a significant effect on block-level elements) */
     vertical-align: bottom;
 }
 
+/* Select elements with the class 'card-inner' inside elements with the class 'card-work' */
 .card-work .card-inner{
 
+    /* Set the position property to 'absolute' for 'card-inner' elements */
     position: absolute;
+    /* Position 'card-inner' elements to extend slightly beyond their containing element */
     top: -0.1rem;
     left: -0.1rem;
     right: -0.1rem;
+    /* Set the z-index property to 1 for stacking order */
     z-index: 1;
 }
 
+/* Select 'card-inner' elements inside hovered 'card-work' elements and change background color */
 .card-work:hover .card-inner{
 
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+/* Select elements with the class 'card-title' inside elements with the class 'card-work' */
 .card-work .card-title{
 
+    /* Center-align text within 'card-title' elements */
     text-align: center;
+    /* Set margin to 0 for 'card-title' elements */
     margin: 0;
+    /* Set opacity to 0 to make 'card-title' initially invisible */
     opacity: 0;
+    /* Set the height of 'card-title' elements to 100% of their containing element */
     height: 100%;
+    /* Set the position property to 'relative' for 'card-title' elements */
     position: relative;
 }
 
+/* Select anchor elements within 'card-title' elements inside elements with the class 'card-work' */
 .card-work .card-title a {
 
+    /* Display anchor elements as block elements */
     display: block;
+    /* Remove underline from anchor elements */
     text-decoration: none;
+    /* Set padding on the top of anchor elements */
     padding-top: 45%;
 }
 
+/* Select the ::after pseudo-elements of anchor elements within 'card-title' elements inside elements with the class 'card-work' */
 .card-work .card-title a::after{
 
+    /* Position pseudo-elements to cover the entire area of their containing anchor element */
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
+    /* Set the content property to an empty string */
     content: "";
 }
 
+/* Select 'card-title' elements inside hovered 'card-work' elements and change opacity to 1 */
 .card-work:hover .card-title{
 
     opacity: 1;
