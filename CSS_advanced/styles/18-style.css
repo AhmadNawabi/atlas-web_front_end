@@ -150,8 +150,8 @@ a:active{
 /* Targeting the navbar-menu class, let it float to the right */
 .navbar-menu{
 
-  /* Adjusted from "float: right;" to "float: left;" based on the initial instruction */
-  float: left;
+  /* Letting float to the right */
+  float: right;
 }
 
 /* For the nav class */
@@ -163,6 +163,8 @@ a:active{
   padding: 0;
   /* Center align the text */
   text-align: center;
+  /* list style set to none */
+  list-style: none;
 }
 
 /* For the nav-item class in nav class */
@@ -308,7 +310,7 @@ h1, h2, h3, h4, h5, h6{
     /* Set font size for navigation items to the value of --font-size-medium */
     --nav-item-font-size: var(--font-size-medium);
     /* Set letter spacing for navigation items to 4% of the root element */
-    --nav-item-letter-spacing: 4%;
+    --nav-item-letter-spacing: 0.04rem;
     /* Set display property for navigation items to inline-block */
     --nav-item-display: inline-block;
     /* Set margin for navigation items to 3 times the root element on the bottom and 0 elsewhere */
