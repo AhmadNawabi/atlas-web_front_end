@@ -105,7 +105,7 @@ a:active{
 }
 
 /* Set the styles for the container inside elements with the class 'section-tagline' */
-.section-tagline .container{
+.container{
 
   /* Set the width of the container to 960 pixels */
   width: 960px;
