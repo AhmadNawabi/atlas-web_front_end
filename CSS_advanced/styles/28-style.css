@@ -406,8 +406,8 @@ ul.footer{
 
     display: var(--header-logo-link-display);
     position: var(--header-logo-link-position);
-    top: var(--header-logo-link-top);
-    left: var(--header-logo-link-left);
+    margin-top: var(--header-logo-link-top);
+    margin-left: var(--header-logo-link-left);
 }
 
 
