@@ -189,8 +189,8 @@ a:active{
 
   /* Set display to block */
   display: block;
-  /*- 50% for top and bottom */
-  padding: 50% 0% 50% 0;
+  /*- 50% for top and bottom and equal for the right and left */
+  padding: 50% 0%;
 }
 
 /* Hover effect on nav-link class in nav class */
