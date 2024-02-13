@@ -1,0 +1,553 @@
+/* Universal box sizing rule */
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+/* HTML elements */
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;/* Set the base font size to 62.5% of the default size (typically 16px) */
+}
+
+/* Set the foreground color of the body to text-color */
+body{
+    color: var(--text-color);
+    /* Apply font-family to body using the custom property */
+    font-family: var(--font-family-base);
+    /* Apply font-size-medium to the body*/
+    font-size: var(--font-size-medium);
+    /* Apply regular (normal) font weight to the body */
+    font-weight: var(--font-weight-regular);
+    /* Set the minimum height of line boxes in the body to line-height-base */
+    line-height: var(--line-height-base);
+}
+
+/* Target anchor elements with hyperlinks */
+a:link{
+
+    /* Use the custom text color property for anchor elements */
+    color: var(--text-color);
+    /* Remove text decoration (e.g., underlines) from anchor elements */
+    text-decoration: none;
+}
+
+/* Target visited state for the link and italicize the text */
+a:visited{
+
+    /* Use the custom text color property for anchor elements */
+    color: var(--text-color);
+    /* Remove text decoration (e.g., underlines) from anchor elements */
+    text-decoration: none;
+    /* Italicize the text */
+    font-style: italic;
+}
+
+/* Target hover state for the link and decorate with underline */
+a:hover{
+    
+    /* Decorate the links with an underline when hovering */
+    text-decoration: underline;
+}
+
+/* Target active state for the link and set the background color with color-light-grey */
+a:active{
+
+    /* set the background color with color-light-grey */
+    background-color: var(--color-light-grey);
+}
+
+/* Hide all elements with the class visually-hidden */
+.visually-hidden{
+    display: none;
+}
+
+/* Set the foreground color of elements with the class card-category to color-primary */
+.card-category{
+    
+    color: var(--color-primary);
+}
+
+/* Target the class section-header and set its horizontal alignment using the custom property */
+.section-header{
+
+    /* Set the text alignment using the custom property */
+    text-align: var(--section-header-align);
+}
+
+/* Styling for section titles */
+.section-title{
+
+    /* Set the font family for section titles using the title font family custom property */
+    font-family: var(--font-family-title);
+    /* Set the font size for section titles using the xx-large font size custom property */
+    font-size: var(--font-size-xx-large);
+    /* Set the font weight for section titles using the bold font weight custom property */
+    font-weight: var(--font-weight-bold);
+    /* Set the margin for section titles using the section title margin custom property */
+    margin: var(--section-title-margin);
+    /* Set the color for section titles using the section title color custom property */
+    color: var(--section-title-color);
+}
+
+/* Set the foreground color of elements with the class section-tagline to color-primary */
+.section-tagline{
+
+    /* Set text color using the primary color custom property */
+    color: var(--color-primary);
+    /* Set font family using the title font family custom property */
+    font-family: var(--font-family-title);
+    /* Transform text to uppercase using the section tagline transform custom property */
+    text-transform: var(--section-tagline-transform);
+    /* Set font weight to bold using the bold font weight custom property */
+    font-weight: var(--font-weight-bold);
+}
+
+/* Set the styles for the container inside elements with the class 'section-tagline' */
+.section-tagline .container{
+
+  /* Set the width of the container to 960 pixels */
+  width: 960px;
+  /* Automatically calculate and set the left margin to center the container within its parent element */
+  margin-left: auto;
+  /* Automatically calculate and set the right margin to center the container within its parent element */
+  margin-right: auto;
+}
+
+/* Define CSS variables in :root to be used throughout the stylesheet */
+:root{
+
+    --color-primary: #d73953; /* Primary color for accent elements */
+    --color-black: #090909; /* Black color */
+    --color-white: #ffffff; /* White color */
+    --color-light-grey: #f3f3f3; /* Light grey color */
+    --color-dark-grey: #353535; /* Dark grey color */
+
+    --text-color: var(--color-black); /* Text color initially set to color-black variable */
+}
+
+/* Define custom font-family properties in :root */
+:root{
+    /* Base font family for the entire document */
+    --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* Font family for titles or headings, using the same choices as the base */
+    --font-family-title: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Apply font-family to all heading tags using the custom property */
+h1, h2, h3, h4, h5, h6{
+
+    /* Use the custom font-family for headings */
+    font-family: var(--font-family-title);
+    /* Apply bold font weight to headings*/
+    font-weight: var(--font-weight-bold);
+}
+
+/* Creating the size custom properties */
+:root{
+    /* Custom property for small font size */
+    --font-size-small: 1.2rem;
+    /* Custom property for medium font size */
+    --font-size-medium: 1.6rem;
+    /* Custom property for large font size */
+    --font-size-large: 1.8rem;
+    /* Custom property for extra-large font size */
+    --font-size-x-large: 2.3rem;
+    /* Custom property for double extra-large font size */
+    --font-size-xx-large: 4.8rem;
+}
+
+/* Creating the weight custon properties */
+:root{
+    /* Custom property for regular (normal) font weight */
+    --font-weight-regular: 400;
+    /* Custom property for bold font weight */
+    --font-weight-bold: 700;
+}
+
+/* Define custom line-height properties in :root */
+:root{
+
+    /* Custom property for small line height */
+    --line-height-small: 1.2;
+    /* Custom property for base (normal) line height */
+    --line-height-base: 1.5;
+    /* Custom property for big (large) line height */
+    --line-height-big: 1.8;
+}
+
+/* Define a custom property in :root to set the default horizontal alignment for section headers */
+:root{
+
+     /* Set the default alignment to center, can be customized as needed */
+    --section-header-align: center;
+}
+
+/* Define a custom property making all laters capital */
+:root{
+    
+    /* Set text to uppercase, making it all capital letters */
+    --section-tagline-transform: uppercase;
+}
+
+:root{
+
+    /* Set the margin of section titles to 0 for no spacing */
+    --section-title-margin: 0;
+    /* Set the color of section titles using the color-black custom property */
+    --section-title-color: var(--color-black);
+}
+
+
+/*===================================================================================================*/
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+ html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+  }
+  
+  /* Sections
+     ========================================================================== */
+  
+  /**
+   * Remove the margin in all browsers.
+   */
+  
+  body {
+    margin: 0;
+  }
+  
+  /**
+   * Render the `main` element consistently in IE.
+   */
+  
+  main {
+    display: block;
+  }
+  
+  /**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+  
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+  
+  /* Grouping content
+     ========================================================================== */
+  
+  /**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+  
+  hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+  }
+  
+  /**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+  
+  pre {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+  /* Text-level semantics
+     ========================================================================== */
+  
+  /**
+   * Remove the gray background on active links in IE 10.
+   */
+  
+  a {
+    background-color: transparent;
+  }
+  
+  /**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+  
+  abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
+  }
+  
+  /**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+  
+  b,
+  strong {
+    font-weight: bolder;
+  }
+  
+  /**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+  
+  code,
+  kbd,
+  samp {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+  /**
+   * Add the correct font size in all browsers.
+   */
+  
+  small {
+    font-size: 80%;
+  }
+  
+  /**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+  
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  
+  sub {
+    bottom: -0.25em;
+  }
+  
+  sup {
+    top: -0.5em;
+  }
+  
+  /* Embedded content
+     ========================================================================== */
+  
+  /**
+   * Remove the border on images inside links in IE 10.
+   */
+  
+  img {
+    border-style: none;
+  }
+  
+  /* Forms
+     ========================================================================== */
+  
+  /**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+  
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+  }
+  
+  /**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+  
+  button,
+  input { /* 1 */
+    overflow: visible;
+  }
+  
+  /**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+  
+  button,
+  select { /* 1 */
+    text-transform: none;
+  }
+  
+  /**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+  
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    -webkit-appearance: button;
+  }
+  
+  /**
+   * Remove the inner border and padding in Firefox.
+   */
+  
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+  
+  /**
+   * Restore the focus styles unset by the previous rule.
+   */
+  
+  button:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+  
+  /**
+   * Correct the padding in Firefox.
+   */
+  
+  fieldset {
+    padding: 0.35em 0.75em 0.625em;
+  }
+  
+  /**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+  
+  legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
+  }
+  
+  /**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+  
+  progress {
+    vertical-align: baseline;
+  }
+  
+  /**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+  
+  textarea {
+    overflow: auto;
+  }
+  
+  /**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+  
+  [type="checkbox"],
+  [type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+  }
+  
+  /**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+  
+  [type="number"]::-webkit-inner-spin-button,
+  [type="number"]::-webkit-outer-spin-button {
+    height: auto;
+  }
+  
+  /**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+  
+  [type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+  }
+  
+  /**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+  
+  [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  
+  /**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+  
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
+  }
+  
+  /* Interactive
+     ========================================================================== */
+  
+  /*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+  
+  details {
+    display: block;
+  }
+  
+  /*
+   * Add the correct display in all browsers.
+   */
+  
+  summary {
+    display: list-item;
+  }
+  
+  /* Misc
+     ========================================================================== */
+  
+  /**
+   * Add the correct display in IE 10+.
+   */
+  
+  template {
+    display: none;
+  }
+  
+  /**
+   * Add the correct display in IE 10.
+   */
+  
+  [hidden] {
+    display: none;
+  }
+  
