@@ -274,7 +274,7 @@ ul.footer{
 }
 
 /* Select the SVG children of elements with the social-link class */
-.social-link svg{
+.social-link > svg{
 
     /* Fill in the color of the SVG children with the value of --text-color variable */
     fill: var(--text-color);
