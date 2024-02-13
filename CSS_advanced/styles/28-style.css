@@ -390,23 +390,30 @@ ul.footer{
     padding: 10rem 40rem 2rem 0;
 }
 
-
+/* Select elements with the class 'header' */
 .header{
 
+    /* Set padding for elements with the class 'header' using the value of the --header-padding variable */
     padding: var(--header-padding);
 }
 
+/* Select elements with the class 'header-logo' */
 .header-logo{
 
+     /* Set the position property for elements with the class 'header-logo' using the value of the --header-logo-position variable */
     position: var(--header-logo-position);    
 }
 
-
+/* Select anchor elements within elements with the class 'header-logo' */
 .header-logo a {
 
+    /* Render the display property for anchor elements within 'header-logo' using the value of the --header-logo-link-display variable */
     display: var(--header-logo-link-display);
+    /* Set the position property for anchor elements within 'header-logo' using the value of the --header-logo-link-position variable */
     position: var(--header-logo-link-position);
+    /* Set the vertical position of anchor elements within 'header-logo' using the value of the --header-logo-link-top variable */
     top: var(--header-logo-link-top);
+    /* Set the horizontal position of anchor elements within 'header-logo' using the value of the --header-logo-link-left variable */
     left: var(--header-logo-link-left);
 }
 
