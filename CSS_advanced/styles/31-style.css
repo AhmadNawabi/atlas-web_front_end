@@ -536,7 +536,7 @@ ul.footer{
 
 .card-testimonial .card-quote::before{
 
-    content: \201C;
+    content: "\201C";
     position: absolute;
     object-position: -4.5rem;
     left: -1rem;
