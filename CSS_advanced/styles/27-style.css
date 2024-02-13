@@ -369,20 +369,25 @@ ul.footer{
     color: var(--color-primary);
 }
 
-
+/* Select elements with the class 'section-hero' */
 .section-hero{
 
+    /* Set the background size of 'section-hero' elements to 90rem width and auto height */
     background-size: 90rem auto;
 }
 
+/* Select elements with the class 'section-title' that are descendants of elements with the class 'section-hero' */
 .section-hero .section-title{
 
+    /* Add a bottom margin of 5rem to 'section-title' elements within 'section-hero' */
     margin-bottom: 5rem;
 }
 
+/* Select elements with the class 'section-inner' that are descendants of elements with the class 'section-hero' */
 .section-hero .section-inner{
 
-    padding: 10rem 40rem 2rem 0rem;
+    /* Set padding for 'section-inner' elements within 'section-hero' - 10rem top, 40rem right, 2rem bottom, 0 left */
+    padding: 10rem 40rem 2rem 0;
 }
 
 /* Define CSS variables in :root to be used throughout the stylesheet */
