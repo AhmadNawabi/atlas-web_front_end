@@ -528,20 +528,29 @@ ul.footer{
     opacity: 1;
 }
 
-
+/* Select elements with the class 'card-quote' inside elements with the class 'card-testimonial' */
 .card-testimonial .card-quote{
 
+    /* Set the position property to 'relative' for 'card-quote' elements */
     position: relative;
 }
 
+/* Select before pseudo-elements of 'card-quote' elements inside elements with the class 'card-testimonial' */
 .card-testimonial .card-quote::before{
 
+    /* Set the content property to the Unicode character for an opening double quotation mark */
     content: "\201C";
+    /* Set the position property to 'absolute' for the before pseudo-elements */
     position: absolute;
+    /* Shift the object position to adjust the vertical alignment of the opening double quotation mark */
     object-position: -4.5rem;
+    /* Set the left offset of the before pseudo-elements to -1rem */
     left: -1rem;
+    /* Set the color of the opening double quotation mark to a specific shade of gray */
     color: #efeded;
+      /* Set the font size of the opening double quotation mark to 10rem */
     font-size: 10rem;
+    /* Set the z-index property to -1 for stacking order behind the content of the 'card-quote' element */
     z-index: -1;
 }
 
