@@ -168,7 +168,7 @@ a:active{
 }
 
 /* For the nav-item class in nav class */
-.nav:nav-item{
+.nav:item{
 
   /* Set font weight using custom property */
   font-family: var(--nav-item-font-family);
@@ -185,7 +185,7 @@ a:active{
 }
 
 /* For the nav-link class in nav class */
-.nav:nav-link{
+.nav:link{
 
   /* Set display to block */
   display: block;
@@ -194,7 +194,7 @@ a:active{
 }
 
 /* Hover effect on nav-link class in nav class */
-.nav:nav-link:hover{
+.nav:link:hover{
 
    /* Change color on hover using custom property */
   color: var(--nav-item-link-hover);
