@@ -280,23 +280,33 @@ ul.footer{
     fill: var(--text-color);
 }
 
+/* Select the element with the class 'card-title' that is a descendant of an element with the class 'card-services' */
 .card-services .card-title{
 
+    /* Set the margin of the 'card-title' element to 0 */
     margin: 0;
 }
 
+/* Select anchor elements within an element with the class 'card-services' */
 .card-services a{
 
+    /* Set the display property to 'block' for the anchor elements */
     display: block;
+    /* Set padding for the anchor elements, using 2rem for top, bottom, left, and right */
     padding: 2rem;
+    /* Set the background color of the anchor elements to the value of the --color-light-grey variable */
     background-color: var(--color-light-grey);
 }
 
+/* Select anchor elements within an element with the class 'card-services' when hovered */
 .card-services a:hover{
 
+    /* Set the text color of the hovered anchor elements to the value of the --color-white variable */
     color: var(--color-white);
+    /* Set the background color of the hovered anchor elements to the value of the --color-primary variable */
     background-color: var(--color-primary);
-    text-decoration-line: none;
+    /* Remove the underline on the hovered anchor elements */
+    text-decoration: none;
 }
 
 /* Define CSS variables in :root to be used throughout the stylesheet */
