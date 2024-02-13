@@ -204,6 +204,58 @@ a:active{
   color: var(--nav-item-link-hover);
 }
 
+/* Styling for an unordered list inside elements with the class 'row' */
+.row:ul{
+
+  /* Resetting margin to zero for the unordered list */
+  margin: 0;
+  /* Resetting padding to zero for the unordered list */
+  padding: 0;
+  /* Removing default list styling (bullet points) */
+  list-style: none;
+}
+
+/* Styling for a column taking up one-third of the width */
+.col-1-3{
+
+  /* Setting the width of the column to one-third */
+  width: 33.33%;
+  /* Floating the column to the left for a grid layout */
+  float: left;
+  /* Adding padding around the column for spacing */
+  padding: 0.5rem;
+}
+
+/* Styling for a column taking up one-half of the width */
+.col-1-2{
+
+  /* Setting the width of the column to one-half */
+  width: 50%;
+  /* Floating the column to the left for a grid layout */
+  float: left;
+  /* Adding padding around the column for spacing */
+  padding: 0.5rem;
+}
+
+/* Styling for the copyright information in the footer */
+.footer-copyright{
+
+  /* Resetting margin to zero for the element */
+  margin: 0;
+  /* Setting font size using a custom property */
+  font-size: var(--font-size-small);
+  /* Setting text color using a custom property */
+  color: var(--text-color);
+
+}
+
+/* Styling for an unordered list inside elements with the class 'footer' */
+.footer:ul{
+
+  /* Aligning the text to the right within the 'footer' element */
+  text-align: right;
+}
+
 /* Define CSS variables in :root to be used throughout the stylesheet */
 :root{
 
@@ -327,11 +379,11 @@ h6{
     --nav-item-link-hover: var(--color-primary);
 }
 
-
+/* Define custom properties within the :root pseudo-class */
 :root{
 
+    /* Set the value of --section-tagline-margin to 0 */
   --section-tagline-margin: 0;
-
 }
 
 
