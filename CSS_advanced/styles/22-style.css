@@ -248,6 +248,17 @@ ul.footer{
   text-align: right;
 }
 
+/* Define a CSS class for a data section theme */
+.data-section-theme{
+
+    /* Set the variable --text-color to the value of --color-white */
+    --text-color: var(--color-white);
+    /* Set the variable --section-title-color to the value of --color-white */
+    --section-title-color: var(--color-white);
+    /* Set the background property to the value of --color-black */
+    background: var(--color-black);
+    
+}
 
 /* Define CSS variables in :root to be used throughout the stylesheet */
 :root{
@@ -258,7 +269,7 @@ ul.footer{
     --color-light-grey: #f3f3f3; /* Light grey color */
     --color-dark-grey: #353535; /* Dark grey color */
 
-    --text-color: var(--color-white); /* Text color initially set to color-white variable */
+    --text-color: var(--color-black); /* Text color initially set to color-black variable */
 }
 
 /* Define custom font-family properties in :root */
@@ -334,10 +345,8 @@ h6{
 
     /* Set the margin of section titles to 0 for no spacing */
     --section-title-margin: 0;
-    /* Set the color of section titles using the color-white custom property */
-    --section-title-color: var(--color-white);
-    /* Set the backround color to the color black */
-    background: var(--color-black);
+    /* Set the color of section titles using the color-black custom property */
+    --section-title-color: var(--color-black);
 }
 
 /* Define global custom properties in the :root block for consistent styling throughout the stylesheet */
