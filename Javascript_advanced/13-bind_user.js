@@ -3,8 +3,8 @@ const user = {
   favoriteSport: 'Hockey',
   astrologicalSign: 'Aries',
   firstName: 'Buillaume',
-  lastName: 'Ialva',
-  location: 'Telaviv',
+  lastName: 'Johns',
+  location: 'Netherlands',
   occupation: 'Engineer'
 };
 
