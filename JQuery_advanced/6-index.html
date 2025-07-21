@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Task 6</title>
+  <!-- Load latest Slim & Minified version of jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"></script>
+</head>
+
+<body>
+  <script type="application/javascript">
+    function createFamilyTree() {
+      const table = $('<table>');
+      const thead = $('<thead>').append(
+        $('<tr>').append(
+          $('<th>').text('Firstname'),
+          $('<th>').text('Lastname')
+        )
+      );
+      const tbody = $('<tbody>');
+
+      table.append(thead, tbody);
+      $('body').append(table);
+    }
+
+    function addNewMember(firstName, lastName, position) {
+      const row = $('<tr>');
+      row.append($('<td>').text(firstName));
+      row.append($('<td>').text(lastName));
+
+      const deleteCell = $('<td>').text('(x)').css({
+        'background-color': 'orange',
+        'cursor': 'pointer'
+      });
+
+      deleteCell.click(function () {
+        row.remove();
+      });
+
+      row.append(deleteCell);
+
+      const tbody = $('table tbody');
+      if (position === 'before') {
+        tbody.prepend(row);
+      } else {
+        tbody.append(row);
+      }
+    }
+
+    function createForm() {
+      const form = $('<form>');
+
+      const input1 = $('<input>').attr('type', 'text').attr('placeholder', 'First name');
+      const input2 = $('<input>').attr('type', 'text').attr('placeholder', 'Last name');
+      const select = $('<select>');
+      select.append($('<option>').attr('value', 'before').text('Before'));
+      select.append($('<option>').attr('value', 'after').text('After'));
+
+      const submit = $('<input>').attr('type', 'submit');
+
+      form.append(input1, input2, select, submit);
+
+      // Insert form before the table
+      $('table').before(form);
+
+      // Handle form submission
+      form.submit(function (event) {
+        event.preventDefault();
+
+        const firstName = form.find('input:nth-of-type(1)').val();
+        const lastName = form.find('input:nth-of-type(2)').val();
+        const position = form.find('select').val();
+
+        if (firstName && lastName) {
+          addNewMember(firstName, lastName, position);
+        }
+
+        form[0].reset();
+      });
+    }
+
+    // Initialize
+    createFamilyTree();
+    createForm();
+  </script>
+</body>
+
+</html>
