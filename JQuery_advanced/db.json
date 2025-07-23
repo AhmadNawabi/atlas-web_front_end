@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Getting Started with JSON Server",
+      "author": "Alice"
+    },
+    {
+      "id": 2,
+      "title": "Advanced jQuery Techniques",
+      "author": "Bob"
+    },
+    {
+      "id": 3,
+      "title": "Understanding APIs",
+      "author": "Charlie"
+    },
+    {
+      "id": 4,
+      "title": "Web Dev Tips",
+      "author": "Ahmad Nawabi"
+    },
+    {
+      "id": 5,
+      "title": "How to Use Git Effectively",
+      "author": "Evan"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "This is a helpful post!",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "Great article on jQuery!",
+      "postId": 2
+    },
+    {
+      "id": 3,
+      "body": "Nice tips!",
+      "postId": 4
+    }
+  ],
+  "profile": {
+    "name": "Ahmad Nawabi"
+  }
+}
