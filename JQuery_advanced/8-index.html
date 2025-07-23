@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+    <meta charset="utf-8"/>
+    <title>Task 8</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    </head>
+
+    <body>
+        <script type="application/javascript">
+            function createSearchForm() {
+                const form = $('<form>');
+                const inputText = $('<input>').attr('type', 'text');
+                const submit = $('<input>').attr('type', 'submit');
+                const resultsList = $('<ul>');
+                const loader = $('<p id="loader">').text('Loading...').hide();
+
+                form.append(inputText, submit);
+                // Append loader after form
+                $('body').append(form, loader, resultsList);
+
+                form.submit(function (event) {
+                    event.preventDefault();
+                    const searchTerm = inputText.val();
+                    queryWikipedia(searchTerm);
+                });
+            }
+
+            function addNewArticle(id, title, snippet) {
+        const li = $('<li>');
+        const paragraph1 = $('<p>').html(`<span>${id} - </span><b>${title}</b>`);
+        const paragraph2 = $('<p>').html(snippet);
+        li.append(paragraph1, paragraph2);
+        $('ul').append(li);
+    }
+
+    function queryWikipedia(search) {
+      $('#loader').show(); // Show the loader
+      const url = 'https://en.wikipedia.org/w/api.php';
+      const data = {
+        action: 'query',
+        list: 'search',
+        srsearch: search,
+        format: 'json',
+        origin: '*'
+      };
+
+      $.ajax({
+        url: url,
+        method: 'GET',
+        data: data,
+        success: function (response) {
+          $('ul').empty();
+          const results = response.query.search;
+          results.forEach(function (item) {
+            addNewArticle(item.pageid, item.title, item.snippet);
+          });
+        },
+        error: function () {
+          console.error('Error fetching Wikipedia articles.');
+        },
+        complete: function () {
+          $('#loader').hide(); // Always hide loader after success or failure
+        }
+      });
+    }
+
+    // Initialize on load
+    createSearchForm();
+
+    </script>
+    </body>
+</html>
