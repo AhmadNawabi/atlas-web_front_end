@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cookies</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>  
+
+ <main>
+    <section id="login-form">
+      <h1>Login to the Website</h1>
+      <input type="text" id="firstname" placeholder="Enter Firstname" />
+      <input type="text" id="email" placeholder="Enter Email" />
+      <button onclick="setCookies()">Log me in</button>
+    </section>
+
+    <section id="show-cookies">
+      <h1>Cookies</h1>
+      <button onclick="showCookies()">Show the Cookies</button>
+    </section>
+  </main>
+
+  <!-- JavaScript -->
+  <!------------------------------------------------------------------------------------------------>
+  <script>
+    function setCookies() {
+      const firstname = document.getElementById('firstname').value.trim();
+      const email = document.getElementById('email').value.trim();
+
+
+        // Calculate expiration date (10 days from now on)
+        const expirationDate = new Date();
+        expirationDate.setTime(expirationDate.getTime() + (10 * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + expirationDate.toUTCString();
+
+        // Set cookies with expiration and path
+      document.cookie = `firstname=${encodeURIComponent(firstname)}; ${expires}; path=/`;
+      document.cookie = `email=${encodeURIComponent(email)}; ${expires}; path=/`;
+    }
+
+    // Get cookie by name
+    function getCookie(name) {
+        const cookies = document.cookie.split('; ');
+        for (let i = 0; i < cookies.length; i++) {
+            const [key, value] = cookies[i].split('=');
+            if (key === name) {
+                return decodeURIComponent(value);
+            }
+        }
+        return "";
+    }
+
+    function showCookies() {
+        const firstname = getCookie("firstname");
+        const email = getCookie('email');
+
+        const message = `Email: ${email} - Firstname: ${firstname}`;
+
+        const p = document.createElement('p');
+        p.textContent = message;
+        document.querySelector('main').appendChild(p);
+    }
+  </script>
+
+</body>
+</html>
