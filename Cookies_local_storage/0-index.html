@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cookies</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>  
+
+ <main>
+    <section id="login-form">
+      <h1>Login to the Website</h1>
+      <input type="text" id="firstname" placeholder="Enter Firstname" />
+      <input type="text" id="email" placeholder="Enter Email" />
+      <button onclick="setCookies()">Log me in</button>
+    </section>
+
+    <section id="show-cookies">
+      <h1>Cookies</h1>
+      <button onclick="showCookies()">Show the Cookies</button>
+    </section>
+  </main>
+
+  <!-- JavaScript -->
+  <!------------------------------------------------------------------------------------------------>
+  <script>
+    function setCookies() {
+      const firstname = document.getElementById('firstname').value.trim();
+      const email = document.getElementById('email').value.trim();
+
+      document.cookie = `firstname=${encodeURIComponent(firstname)}; path=/`;
+      document.cookie = `email=${encodeURIComponent(email)}; path=/`;
+    }
+
+    function showCookies() {
+      const cookies = document.cookie.split('; ');
+      const cookieMap = {};
+
+      cookies.forEach(cookie => {
+        const [key, value] = cookie.split('=');
+        cookieMap[key] = decodeURIComponent(value);
+      });
+
+      const firstname = cookieMap.firstname || "Not set";
+      const email = cookieMap.email || "Not set";
+
+      const message = `Cookies: Firstname = ${firstname}, Email = ${email}`;
+
+      const p = document.createElement('p');
+      p.textContent = message;
+      document.querySelector('main').appendChild(p);
+    }
+  </script>
+
+</body>
+</html>
