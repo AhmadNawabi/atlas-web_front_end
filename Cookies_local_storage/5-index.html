@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shopping Cart with LocalStorage</title>
+  <link rel="stylesheet" href="shopping-cart.css">
+
+</head>
+<body>
+ <script>
+  // Available items
+  const availableItems = ['Shampoo', 'Soap', 'Sponge', 'Water'];
+
+  // Check for localStorage support
+  if (typeof Storage === 'undefined') {
+    alert('Sorry, your browser does not support Web storage. Try again with a better one.');
+  } else {
+    createStore();
+    displayCart();
+  }
+
+  // Add item to cart
+  function addItemToCart(item) {
+    localStorage.setItem(item, 'true');
+    displayCart();
+  }
+
+  // Create the store 
+  function createStore() {
+    const h1 = document.createElement('h1');
+    h1.textContent = 'Available Items';
+    document.body.appendChild(h1);
+
+    const ul = document.createElement('ul');
+    document.body.appendChild(ul);
+
+    availableItems.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = item;
+      li.addEventListener('click', () => addItemToCart(item));
+      ul.appendChild(li);
+    });
+  }
+
+  // Display cart message only if needed
+  function displayCart() {
+    const cartCount = availableItems.filter(item => localStorage.getItem(item) === 'true').length;
+
+    const existingP = document.querySelector('body > p');
+
+    // If no items in cart, remove message
+    if (cartCount === 0) {
+      if (existingP) {
+        existingP.remove();
+      }
+      return;
+    }
+
+    // If message exists, update it. Otherwise, create it.
+    if (existingP) {
+      existingP.textContent = `You previously had ${cartCount} items in your cart`;
+    } else {
+      const p = document.createElement('p');
+      p.textContent = `You previously had ${cartCount} items in your cart`;
+      document.body.appendChild(p);
+    }
+  }
+</script>
+</body>
+</html>
